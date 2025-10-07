@@ -8,10 +8,10 @@ public class Member {
     private Grade grade; // enum 사용
 
     // 생성자
-    public Member(Grade grade, String name, Long id) {
-        this.grade = grade;
-        this.name = name;
+    public Member(Long id, String name, Grade grade) {
         this.id = id;
+        this.name = name;
+        this.grade = grade;
     }
 
     // getter & setter
