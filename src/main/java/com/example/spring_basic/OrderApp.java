@@ -13,8 +13,13 @@ public class OrderApp {
     public static void main(String[] args) {
 
         // Service 객체 생성 => client가 사용함
-        MemberService memberService = new MemberServiceImpl();
-        OrderService orderService = new OrderServiceImpl();
+//        MemberService memberService = new MemberServiceImpl();
+//        OrderService orderService = new OrderServiceImpl();
+
+        // 1차: AppConfig로 만들기
+        AppConfig appConfig = new AppConfig();
+        MemberService memberService = appConfig.memberService();
+        OrderService orderService = appConfig.orderService();
 
         Member member = new Member(1L, "Eric", Grade.VIP);
 
