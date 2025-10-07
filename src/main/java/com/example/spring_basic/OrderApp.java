@@ -7,6 +7,8 @@ import com.example.spring_basic.member.service.MemberServiceImpl;
 import com.example.spring_basic.order.Order;
 import com.example.spring_basic.order.service.OrderService;
 import com.example.spring_basic.order.service.OrderServiceImpl;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class OrderApp {
 
@@ -17,9 +19,15 @@ public class OrderApp {
 //        OrderService orderService = new OrderServiceImpl();
 
         // 1차: AppConfig로 만들기
-        AppConfig appConfig = new AppConfig();
-        MemberService memberService = appConfig.memberService();
-        OrderService orderService = appConfig.orderService();
+//        AppConfig appConfig = new AppConfig();
+//        MemberService memberService = appConfig.memberService();
+//        OrderService orderService = appConfig.orderService();
+
+        // 2차: Spring Bean 컨테이너(ApplicationContext)로 관리
+        ApplicationContext applicationContext = new AnnotationConfigApplicationContext(AppConfig.class);
+        MemberService memberService = applicationContext.getBean("memberService", MemberService.class);
+        OrderService orderService = applicationContext.getBean("orderService", OrderService.class);
+
 
         Member member = new Member(1L, "Eric", Grade.VIP);
 

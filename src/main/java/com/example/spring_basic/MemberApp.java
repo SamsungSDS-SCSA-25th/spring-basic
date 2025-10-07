@@ -3,6 +3,8 @@ package com.example.spring_basic;
 import com.example.spring_basic.member.Grade;
 import com.example.spring_basic.member.Member;
 import com.example.spring_basic.member.service.MemberService;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class MemberApp {
 
@@ -12,8 +14,12 @@ public class MemberApp {
 //        MemberService memberService = new MemberServiceImpl();
 
         // 1차: AppConfig로 만들기
-        AppConfig appConfig = new AppConfig();
-        MemberService memberService = appConfig.memberService();
+//        AppConfig appConfig = new AppConfig();
+//        MemberService memberService = appConfig.memberService();
+
+        // 2차: Spring Bean 컨테이너(ApplicationContext)로 관리
+        ApplicationContext applicationContext = new AnnotationConfigApplicationContext(AppConfig.class);
+        MemberService memberService = applicationContext.getBean("memberService", MemberService.class);
 
         // 회원1 생성
         Member m1 = new Member(1L, "Eric", Grade.VIP);

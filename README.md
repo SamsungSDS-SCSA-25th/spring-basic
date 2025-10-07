@@ -11,3 +11,6 @@
 
 - ### AppConfig로 DI
 ![appconfig.png](img/appconfig.png)
+
+- ### Spring Bean으로 DI (Refactor)
+  - 코드 참고
