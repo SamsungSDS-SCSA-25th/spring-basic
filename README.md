@@ -8,3 +8,6 @@
 ![order-whole.png](img/order-whole.png)
 ![order-class.png](img/order-class.png)
 ![order-object.png](img/order-object.png)
+
+- ### AppConfig로 DI
+![appconfig.png](img/appconfig.png)
