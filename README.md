@@ -35,8 +35,15 @@
 
 - ### 컴포넌트 스캔 @ComponentScan
   - @Component 사용한 클래스를 스프링 빈에 자동 등록해줌
-  ![ComponentScan.png](img/ComponentScan.png)
+    - 종류
+      - @Controller
+      - @Repository
+      - @Configuration
+      - @Service
+      
+    ![ComponentScan.png](img/ComponentScan.png)
+  
   - @Autowired 함께 사용. DI 위함!
   ![Autowired.png](img/Autowired.png)
     - 같은 타입이 빈에 여러 개 있으면 생기는 문제 -> 바로 뒤에서 설명
-  
+

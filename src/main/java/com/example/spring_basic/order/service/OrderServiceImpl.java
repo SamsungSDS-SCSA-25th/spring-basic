@@ -5,9 +5,9 @@ import com.example.spring_basic.member.Member;
 import com.example.spring_basic.member.repo.MemberRepository;
 import com.example.spring_basic.order.Order;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
-@Component
+@Service
 public class OrderServiceImpl implements OrderService {
 
     // DI 필요함 => Service에서 new로 객체 만들면 곤란

@@ -3,9 +3,9 @@ package com.example.spring_basic.member.service;
 import com.example.spring_basic.member.Member;
 import com.example.spring_basic.member.repo.MemberRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
-@Component
+@Service
 public class MemberServiceImpl implements MemberService {
 
     // DI 필요함 => Service에서 new로 객체 만들면 곤란

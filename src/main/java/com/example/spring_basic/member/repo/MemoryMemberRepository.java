@@ -1,12 +1,12 @@
 package com.example.spring_basic.member.repo;
 
 import com.example.spring_basic.member.Member;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
 import java.util.HashMap;
 import java.util.Map;
 
-@Component
+@Repository
 public class MemoryMemberRepository implements MemberRepository {
 
     // id, Member 변수 들어갈 store 객체 초기화
