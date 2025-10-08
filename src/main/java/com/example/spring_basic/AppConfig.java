@@ -15,6 +15,10 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class AppConfig {
 
+    // @Bean memberService -> new MemoryMemberRepository()
+    // @Bean orderService -> new MemoryMemberRepository()
+    // 의문점? 싱글톤이 깨질까? => 안 깨진다. 개쩐다 ㄷㄷ (@Configuration이 알아서 해줌)
+
     // MemberService 인터페이스에 대한 구체적인 구현체 값 지정
     @Bean
     public MemberService memberService() {
