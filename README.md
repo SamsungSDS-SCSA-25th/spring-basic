@@ -58,6 +58,15 @@
   - #### Lombok을 활용한 Annotation으로 자동 코드짜기
     - @Getter, @Setter
     - @ToString
-    - ##### @RequiredArgsConstructor
+    - @RequiredArgsConstructor
       - @Autowired 생성자를 만들어 준다.
-
+  
+  - 조회한 빈이 2개 이상인 경우
+    - DiscountPolicy
+      - 정액할인정책
+      - 정률할인정책
+    - 해결!
+      - @Qualifier
+      - @Primary (실무에서 자주 사용!) -> 아래 예시
+        - 메인DB
+        - 보조DB 
