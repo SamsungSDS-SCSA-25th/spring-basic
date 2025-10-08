@@ -80,3 +80,22 @@
     - 기술지원 빈 (로그, 데이터베이스 연결) / 다형성 적극활용한 업무로직 빈 (고민 필요함)
       - 수동기능 사용 (명확하게!)
       - config 이용 @Bean -> 빈들을 거시적으로 볼 수 있다는 장점
+
+- ### 스프링 빈의 라이프 사이클
+  - 스프링 컨테이너 생성
+  - 스프링 빈 생성
+  - 의존관계 주입 (DI)
+  - **초기화 콜백**
+    1. implements InitializingBean (인터페이스 활용)
+      - afterPropertiesSet() 메서드 오버라이드
+      - 위 메서드에 초기화 후 바로 실행하려는 기능 추가
+    2. @Bean(initMethod="name")
+    3. (실무에서 많이 사용) **@PostConstruct**
+  - 사용
+  - **소멸전 콜백**
+    1. implements DisposableBean (인터페이스 활용)
+      - destroy() 메서드 오버라이드
+      - 위 메서드에 종료 전에 실행하려는 기능 추가
+    2. @Bean(destroyMethod="name")
+    3. (실무에서 많이 사용) **@PreDestroy**
+  - 스프링 종료
