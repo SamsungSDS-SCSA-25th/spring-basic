@@ -13,7 +13,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class LogDemoController {
 
     private final LogDemoService logDemoService;
-    private final ObjectProvider<MyLogger> myLoggerProvider;
+//    private final ObjectProvider<MyLogger> myLoggerProvider;
+    private final MyLogger myLogger;
 
     @RequestMapping("log-demo")
     @ResponseBody
@@ -22,7 +23,7 @@ public class LogDemoController {
         String requestURL = request.getRequestURL().toString();
 
         // Provider(DL)을 사용하여, 필요할 때 DI가 가능함
-        MyLogger myLogger = myLoggerProvider.getObject();
+//        MyLogger myLogger = myLoggerProvider.getObject();
         // setter로 넣기
         myLogger.setRequestURL(requestURL);
 
