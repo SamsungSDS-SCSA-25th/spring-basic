@@ -54,4 +54,10 @@
     - 필드에 final 넣기가 가능함
     - 객체 생성 시, 인자로 넣을 의존관계를 넣기에 '누락방지'
     - (참고) 생성자 주입이 하나면, @Autowired 생략가능!
+  
+  - #### Lombok을 활용한 Annotation으로 자동 코드짜기
+    - @Getter, @Setter
+    - @ToString
+    - ##### @RequiredArgsConstructor
+      - @Autowired 생성자를 만들어 준다.
 
