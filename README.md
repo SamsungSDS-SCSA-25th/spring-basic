@@ -32,3 +32,11 @@
     - ##### 즉, 바로 값을 return해줘야함. 가변 인자 절대 안됨!!!
   - #### @Configuration
     - new가 여러번 호출되어도, 싱글톤을 유지되게 해줌.
+
+- ### 컴포넌트 스캔 @ComponentScan
+  - @Component 사용한 클래스를 스프링 빈에 자동 등록해줌
+  ![ComponentScan.png](img/ComponentScan.png)
+  - @Autowired 함께 사용. DI 위함!
+  ![Autowired.png](img/Autowired.png)
+    - 같은 타입이 빈에 여러 개 있으면 생기는 문제 -> 바로 뒤에서 설명
+  
